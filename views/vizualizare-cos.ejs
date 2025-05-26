@@ -1,0 +1,36 @@
+<% if (produse && produse.length > 0) { %>
+    <div class="grid-produse">
+        <% produse.forEach(produs => { %>
+            <div class="grid-element-produs">
+                <div style="position: relative;" class="element-informatii">
+                    <form action="/stergere-element" method="POST">
+                        <input type="hidden" name="id" value="<%= produs.id %>">
+                        <button type="submit" class="close-item-button">
+                            <img width="20" src="/public/imagini/utils/x.png" alt="Sterge">
+                        </button>
+                    </form>
+                    <p>
+                        <%= produs.nume %>
+                    </p>
+                    <div>
+                        <img width=150 src="<%= produs.imagine %>">
+                    </div>
+                    <p>
+                        Cantitate: <%= produs.cantitate %>
+                    </p>
+                    <p>
+                        <%= produs.pret %> RON
+                    </p>
+                    <% if (utilizator) { %>
+                        <form action="/adaugare-cos" method="POST">
+                            <input type="hidden" name="id" value="<%= produs.id %>">
+                            <button class="green-button" type="submit">Adaugă în coș</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+<% } else { %>
+    <p>Coșul tău este gol.</p>
+<% } %>

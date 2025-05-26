@@ -1,0 +1,62 @@
+[
+    {
+        "intrebare": "Cine a pictat „Noaptea înstelată”?",
+        "variante": ["Claude Monet", "Pablo Picasso", "Vincent van Gogh", "Leonardo da Vinci"],
+        "corect": 2,
+        "imagine": "noaptea-instelata.jpg"
+    },
+    {
+        "intrebare": "În ce curent artistic se încadrează Salvador Dalí?",
+        "variante": ["Impresionism", "Suprarealism", "Cubism", "Baroc"],
+        "corect": 1,
+        "imagine": "dali.jpg"
+    },
+    {
+        "intrebare": "Ce artist este cunoscut pentru stilul „cubism”?",
+        "variante": ["Picasso", "Michelangelo", "Renoir", "Rembrandt"],
+        "corect": 0,
+        "imagine": "cubism.jpg"
+    },
+    {
+        "intrebare": "Ce pictură celebră se află în muzeul Luvru?",
+        "variante": ["Fata cu cercel de perlă", "Masa Cinei de Taină", "Gioconda", "Strigătul"],
+        "corect": 2,
+        "imagine": "Louvre.jpg"
+    },
+    {
+        "intrebare": "Care este tehnica de pictură folosită în fresce?",
+        "variante": ["Pictură în ulei", "Acuarelă", "Pigment pe tencuială udă", "Ceramică smălțuită"],
+        "corect": 2,
+        "imagine": "fresce.jpg"
+    },
+    {
+        "intrebare": "Cine a pictat tavanul Capelei Sixtine?",
+        "variante": ["Leonardo da Vinci", "Michelangelo", "Donatello", "Raphael"],
+        "corect": 1,
+        "imagine": "capela-sixtina.jpg"
+    },
+    {
+        "intrebare": "Ce mișcare artistică a fost inițiată de Marcel Duchamp cu obiecte banale prezentate ca artă?",
+        "variante": ["Suprarealism", "Futurism", "Dadaism", "Minimalism"],
+        "corect": 2,
+        "imagine": "duchamp.jpg"
+    },
+    {
+        "intrebare": "Ce artist a pictat „Țipătul” (The Scream)?",
+        "variante": ["Edvard Munch", "Paul Cézanne", "Gustav Klimt", "Andy Warhol"],
+        "corect": 0,
+        "imagine": "scream.jpg"
+    },
+    {
+        "intrebare": "Care este simbolul central în picturile lui René Magritte?",
+        "variante": ["Flori", "Ceasuri topite", "Mere verzi", "Ochi umani"],
+        "corect": 2,
+        "imagine": "magritte.jpg"
+    },
+    {
+        "intrebare": "Ce artist pop art este cunoscut pentru portretele lui Marilyn Monroe?",
+        "variante": ["Roy Lichtenstein", "Keith Haring", "Andy Warhol", "Jean-Michel Basquiat"],
+        "corect": 2,
+        "imagine": "warhol.jpg"
+    }
+]

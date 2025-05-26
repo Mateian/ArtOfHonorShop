@@ -1,0 +1,39 @@
+<div class="centered-content-container">
+    <form style="padding: 50px 50px; display: flex; flex-direction: column; justify-content: center; align-items: center;" action="/verificare-autentificare" method="POST">
+        <h2>Autentificare</h2>
+        <% if(mesajEroare) { %>
+            <p id="p-eroare" style="color: rgb(255, 226, 226); font-weight: bold; background-color: red; border-radius: 15px; padding: 10px 15px;">😱 <%= mesajEroare %> ⚠️</p>
+            <script>
+                setTimeout(function() {
+                    var eroare = document.getElementById('p-eroare');
+                    if(eroare) {
+                        eroare.style.display = 'none';
+                    }
+                }, 3000);
+            </script>
+        <% } %>
+        
+        <% if (mesajEroareText) { %>
+            <div id="mesaj-eroare" style="left: 50%; transform: translateX(-50%); text-align: center; color: white; background-color: lightcoral; font-size: 14px; padding: 10px 15px; border-radius: 10px; position: fixed; top: 10px; right: auto;">
+                <%= mesajEroareText %>
+            </div>
+            <script>
+                setTimeout(function() {
+                    var eroare = document.getElementById('mesaj-eroare');
+                    if(eroare) {
+                        eroare.style.display = 'none';
+                    }
+                }, 3000)
+            </script>
+        <% } %>
+        <div>
+            <label for="autentificare-username">Username</label> <br>
+            <input style="border: 1px solid purple; padding: 3px 7px; border-radius: 7px; margin-bottom: 15px;" type="text" name="autentificare-username"> <br>
+        
+            <label for="autentificare-password">Password</label> <br>
+            <input style="border: 1px solid purple; padding: 3px 7px; border-radius: 7px; margin-bottom: 15px;" type="password" name="autentificare-password"> <br>    
+        </div>
+        
+        <button id="login-button" type="submit" class="purple-button" name="login-button">Trimite</button>
+    </form>
+</div>

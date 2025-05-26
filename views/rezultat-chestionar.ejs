@@ -1,0 +1,18 @@
+<div class="centered-content-container">
+    <h2>Rezultat chestionar</h2>
+    <p>Ai răspuns corect la <strong><%= scor %></strong> din <strong><%= total %></strong> întrebări.</p>
+    
+    <ul>
+        <% raspunsuri.forEach((r) => { %>
+            <li>
+                <strong><%= r.intrebare %></strong><br>
+                Răspunsul tău: <%= r.raspunsUtilizator %>
+                <% if (r.corect) { %>
+                    Corect
+                <% } else { %>
+                    Greșit (Corect: <%= r.raspunsCorect %>)
+                <% } %>
+            </li>
+        <% }) %>
+    </ul>
+</div>

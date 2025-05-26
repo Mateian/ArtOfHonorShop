@@ -1,0 +1,16 @@
+[
+  {
+    "username": "matei",
+    "nume": "Matei",
+    "prenume": "Andrei",
+    "password": "$2b$10$OugpbF8RlzfBaH9l//aFGuwQ.nZcbfKqriCsEXDQYnBK3llV9Rx2S",
+    "rol": "admin"
+  },
+  {
+    "username": "andrei",
+    "nume": "Popescu",
+    "prenume": "Andrei",
+    "password": "$2b$10$6sOnGatucOXpJhFFVRgvQOeWlEw3c.NCdVzHATNZmZ6b7jIDOq4H6",
+    "rol": "user"
+  }
+]

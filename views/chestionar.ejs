@@ -1,0 +1,27 @@
+<div class="centered-content-container">
+    <div class="quiz-container">
+        <div class="quiz-section-text">
+            <h2 class="quiz-section-text-h2">Întrebarea <%= index + 1 %> din <%= total %></h2>
+    
+            <form action="/chestionar/<%= index %>" method="POST">
+                <p><strong><%= intrebare.intrebare %></strong></p>
+            
+                <% intrebare.variante.forEach((v, i) => { %>
+                    <label>
+                        <input type="radio" name="raspuns" value="<%= i %>" required>
+                        <%= v %>
+                    </label><br>
+                <% }) %>
+            
+                <button class="purple-button" type="submit">Următoarea</button>
+            </form>
+        </div>
+        <div class="quiz-section-image">
+            <img 
+                src="/public/imagini/quiz/<%= intrebare.imagine || 'default.png' %>"
+                alt="Imagine întrebare"
+                onerror="this.onerror=null; this.src='/public/imagine/default.png';"
+            />
+        </div>
+    </div>
+</div>

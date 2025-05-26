@@ -1,0 +1,40 @@
+<% if(utilizator) { %>
+    <% if(utilizator.rol == "admin") { %>
+        <div class="top-main">
+            <a href="/creare-bd" class="white-black-button">Creare BD</a>
+            <a href="/inserare-bd" class="white-black-button">Inserare automată BD</a>
+            <a href="/sterge-date" class="red-button">Șterge date</a>
+        </div>
+        <div class="centered-content-container">
+            <div class="container-adauga-produs">
+                <h2>Inserare produs</h2>
+                <form style="display: flex; flex-direction: column; justify-content: center; align-items: center;" id="upload-form" action="/inserare-produs" method="POST" enctype="multipart/form-data">
+                    <label for="inserare-nume">Nume produs:</label><br>
+                    <input type="text" name="inserare-nume" required><br>
+
+                    <label for="inserare-cantitate">Cantitate:</label><br>
+                    <input type="number" name="inserare-cantitate" required><br>
+
+                    <label for="inserare-pret">Preț:</label><br>
+                    <input type="number" name="inserare-pret" required><br>
+
+                    <label for="inserare-imagine">Imagine produs:</label><br>
+                    <input type="file" name="inserare-imagine" accept="image/" required><br>
+
+                    <button type="submit">Încarcă</button>
+                </form>
+            </div>
+        </div>
+    <% } else { %>
+        Nu sunteți administrator. Reveniți la pagina principală. 
+        <br>
+        <br>
+        <a href="/" class="purple-button">Home</a>
+    <% } %>
+
+<% } else { %>
+        Nu sunteți conectat. 
+        <br>
+        <br>
+        <a href="/autentificare" class="purple-button">Conectați-vă</a>
+<% } %>

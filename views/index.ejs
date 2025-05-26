@@ -1,0 +1,54 @@
+<% if (mesajSuccess) { %>
+    <div id="mesaj-succes" style="left: 50%; transform: translateX(-50%); text-align: center; color: green; background-color: lightgreen; font-size: 14px; padding: 10px 15px; border-radius: 10px; position: fixed; top: 10px; right: auto;">
+        <%= mesajSuccess %>
+    </div>
+    <script>
+        setTimeout(function() {
+            var succes = document.getElementById('mesaj-succes');
+            if(succes) {
+                succes.style.display = 'none';
+            }
+        }, 3000)
+    </script>
+<% } %>
+
+<div class="top-main">
+    <a href="/chestionar/0" class="black-white-button">Chestionar</a>
+    <% if (utilizator) { %>
+        <% if (utilizator.rol == "admin") { %>
+            <a href="/admin" class="white-black-button">Admin Panel</a>
+        <% } %>
+    <% } %>
+</div>
+
+
+<% if (produse && produse.length > 0) { %>
+    <div class="grid-produse">
+        <% produse.forEach(produs => { %>
+            <div class="grid-element-produs">
+                <div class="element-informatii">
+                    <p>
+                        <%= produs.nume %>
+                    </p>
+                    <div>
+                        <img width=150 src="<%= produs.imagine %>">
+                    </div>
+                    <p>
+                        Cantitate: <%= produs.cantitate %>
+                    </p>
+                    <p>
+                        <%= produs.pret %> RON
+                    </p>
+                    <% if (utilizator) { %>
+                        <form action="/adaugare-cos" method="POST">
+                            <input type="hidden" name="id" value="<%= produs.id %>">
+                            <button class="green-button" type="submit">Adaugă în coș</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+<% } else { %>
+    <p>Nu exista produse in baza de date.</p>
+<% } %>

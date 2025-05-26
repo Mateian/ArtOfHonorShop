@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <title><%= 'Art of Honor' %></title>
+        <link rel="stylesheet" href="/public/style.css">
+        <link rel="icon" type="image/x-icon" href="/public/imagini/utils/favicon.png">
+    </head>
+    <body>
+        <header>
+            <% if(mesajEroareText !== null) { %>                
+                <div id="alert-eroare" class="alert-eroare">
+                    <%= mesajEroareText %>
+                </div>
+            <% } %>
+            <% if(mesajSuccess !== null) { %>                
+                <div id="alert-success" class="alert-success">
+                    <%= mesajSuccess %>
+                </div>
+            <% } %>
+            <nav>
+                <div class="header-nav-left">
+                    <h2><a href="/" style="text-decoration: none; color: black; font-family: Georgia, serif; font-style: italic;">Art of Honor</a></h2>
+                </div>
+                <div class="header-nav-right">
+                     <% if (utilizator) { %>
+                        <div class="index-connection-info">
+                            <p>Bine ai venit, <%= String(utilizator.nume).charAt(0).toUpperCase() + String(utilizator.nume).slice(1); %> <%= String(utilizator.prenume).charAt(0).toUpperCase() + String(utilizator.prenume).slice(1); %> (<%= utilizator.username %>)</p>
+
+                            <a href="/vizualizare-cos" class="green-button cart-button">
+                                <img src="/public/imagini/utils/carucior.png">
+                            </a>
+                            <a href="/logout" class="red-button">Delogare</a>
+                        </div>
+                        <% } else { %>
+                        <a class="white-button" href="/autentificare">Autentificare</a>
+                    <% } %>
+                    </div>
+            </nav>
+        </header>
+        <main>
+            <%- body %>
+        </main>
+        <footer>
+            <p>&copy; 2025. Bejenaru Matei-Andrei</p>
+        </footer>
+        <script>
+            let succes = document.getElementById("alert-success");
+            if(succes) {
+                setInterval(() => {
+                    succes.style.display = 'none';
+                }, 3000);
+            }
+            let eroare = document.getElementById("alert-eroare");
+            if(eroare) {
+                setInterval(() => {
+                    eroare.style.display = 'none';
+                }, 3000);
+            }
+        </script>
+    </body>
+</html>

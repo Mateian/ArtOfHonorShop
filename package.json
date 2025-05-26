@@ -1,0 +1,40 @@
+{
+  "name": "proiect-2-bejenarumatei",
+  "version": "1.0.0",
+  "description": "Proiect 2 - arta",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HDR-2024-2025/proiect-2-BejenaruMatei.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HDR-2024-2025/proiect-2-BejenaruMatei/issues"
+  },
+  "homepage": "https://github.com/HDR-2024-2025/proiect-2-BejenaruMatei#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^11.10.0",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "fs": "^0.0.1-security",
+    "mongod": "^2.0.0",
+    "mongodb": "^6.16.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.2",
+    "mysql": "^2.18.1",
+    "npm-clean": "^1.0.3",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.7"
+  }
+}
